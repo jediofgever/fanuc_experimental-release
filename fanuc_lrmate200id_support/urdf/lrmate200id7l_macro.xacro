@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find fanuc_lrmate200id_support)/urdf/common_materials.xacro"/>
 
-  <xacro:macro name="fanuc_lrmate200id" params="prefix">
+  <xacro:macro name="fanuc_lrmate200id7l" params="prefix">
     <!-- links: main serial chain -->
     <link name="${prefix}base_link">
       <visual>
@@ -52,14 +52,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id/visual/link_2.stl"/>
+          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id7l/visual/link_2.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <xacro:material_fanuc_yellow />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_2.stl"/>
+          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id7l/collision/link_2.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
       <inertial>
@@ -96,14 +96,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id/visual/link_4.stl"/>
+          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id7l/visual/link_4.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <xacro:material_fanuc_yellow />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_4.stl"/>
+          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id7l/collision/link_4.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
       <inertial>
@@ -166,9 +166,8 @@
       <child link="${prefix}link_1" />
       <axis xyz="0 0 1" />
       <limit effort="0" lower="-2.965" upper="2.965" velocity="7.85" />
-      <dynamics damping="0.0" friction="0.0"/>
-   </joint>
-   <joint name="${prefix}joint_2" type="revolute">
+    </joint>
+    <joint name="${prefix}joint_2" type="revolute">
       <origin xyz="0.050 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_1" />
       <child link="${prefix}link_2" />
@@ -176,7 +175,7 @@
       <limit effort="0" lower="-1.745329" upper="2.530727" velocity="6.63" />
     </joint>
     <joint name="${prefix}joint_3" type="revolute">
-      <origin xyz="0 0 0.330" rpy="0 0 0"/>
+      <origin xyz="0 0 0.440" rpy="0 0 0"/>
       <parent link="${prefix}link_2" />
       <child link="${prefix}link_3" />
       <axis xyz="0 -1 0" />
@@ -190,7 +189,7 @@
       <limit effort="0" lower="-3.315" upper="3.315" velocity="9.60" />
     </joint>
     <joint name="${prefix}joint_5" type="revolute">
-      <origin xyz="0.335 0 0" rpy="0 0 0"/>
+      <origin xyz="0.420 0 0" rpy="0 0 0"/>
       <parent link="${prefix}link_4"/>
       <child link="${prefix}link_5"/>
       <axis xyz="0 -1 0"/>
@@ -220,11 +219,27 @@
       <child link="${prefix}flange" />
     </joint>
 
-    <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
-    <link name="${prefix}tool0" />
+    <link name="${prefix}tool0">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id/visual/link_6.stl"/>
+        </geometry>
+        <xacro:material_fanuc_black />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_6.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+
+
     <joint name="${prefix}link_6-tool0" type="fixed">
       <origin xyz="0 0 0" rpy="${pi} ${-pi/2.0} 0" />
-      <parent link="${prefix}flange" />
+      <parent link="${prefix}link_6" />
       <child link="${prefix}tool0" />
     </joint>
   </xacro:macro>
