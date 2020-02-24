@@ -8,6 +8,8 @@ SimulationPickandPlace::SimulationPickandPlace()
     listener_ = new tf::TransformListener();
     objects_tobe_picked_pub_ = nh_->advertise<geometry_msgs::PoseArray>("objects_tobe_picked", 10);
     gtBBX_pub_ = nh_->advertise<jsk_recognition_msgs::BoundingBoxArray>("/gt_labels", 1);
+
+ 
 }
 
 SimulationPickandPlace::~SimulationPickandPlace()
@@ -30,7 +32,7 @@ void SimulationPickandPlace::OnUpdate()
     sleep(0.5);
     geometry_msgs::PoseArray objects_tobe_picked_array;
     std::string robot_model_name = "larmate200id7l";
-    std::string gripper_link_name = "Gripper_Base";
+    std::string gripper_link_name = "link_6";
     std::string base_link_name = "base_link";
 
     physics::Model_V objects_tobe_picked;
@@ -69,7 +71,7 @@ void SimulationPickandPlace::OnUpdate()
                                                   (current_object_pos[1] - base_link_pos[1]),
                                                   (current_object_pos[2] - base_link_pos[2]));
 
-        /*if (std::abs(gripper_link_pos[1] - current_object_pos[1]) < 0.1)
+        if (std::abs(gripper_link_pos[1] - current_object_pos[1]) < 0.1)
         {
 
             geometry_msgs::Pose obj_pose;
@@ -84,14 +86,14 @@ void SimulationPickandPlace::OnUpdate()
             //ROS_INFO("Found object to be picked at x %.2f y %.2f z %.2f", obj_pose.position.x, obj_pose.position.y, obj_pose.position.z);
             objects_tobe_picked_array.poses.push_back(obj_pose);
 
-            if ((gripper_link_pos[2] - current_object_pos[2] < 0.25) && (gripper_link_pos[0] > 0.45))
+            if ((gripper_link_pos[2] - current_object_pos[2] < 0.40) && (gripper_link_pos[0] > 0.70))
             {
                 ROS_INFO("SHOULD BE ATTACHED NOW");
                 ignition::math::Pose3d offset(gripper_link_pos[0], gripper_link_pos[1], (gripper_link_pos[2] - 0.2), 0, -1, 0, 0);
                 current_object_tobe_picked->SetWorldPose(offset, true, true);
                 current_object_tobe_picked->SetGravityMode(true);
             }
-        }*/
+        }
 
         // publish ground truth 3d boxes for dataset creation
         ignition::math::Box box = current_object_tobe_picked->BoundingBox();
@@ -122,7 +124,7 @@ void SimulationPickandPlace::OnUpdate()
         }
         catch (tf::TransformException ex)
         {
-            //ROS_ERROR("%s", ex.what());
+            ROS_ERROR("%s", ex.what());
             return;
             ros::Duration(1.0).sleep();
         }
