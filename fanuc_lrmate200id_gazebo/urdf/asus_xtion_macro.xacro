@@ -6,7 +6,7 @@
     <parent link="link_4" />
     <child link="camera_link" />
     <origin rpy="-0.0037 1.50600 -0.0031"
-     xyz="0.32273 0.01841 -0.06556" />
+     xyz="0.32273 0.01841 -0.07556" />
     <axis xyz="0 0 0" />
 </joint>
 
