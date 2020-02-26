@@ -37,6 +37,7 @@ class SimulationPickandPlace : public WorldPlugin {
    public:
     SimulationPickandPlace();
     ~SimulationPickandPlace();
+    double fRand(double fMin, double fMax);
     void Load(physics::WorldPtr _parent, sdf::ElementPtr /*_sdf*/);
     void OnUpdate();
 };
