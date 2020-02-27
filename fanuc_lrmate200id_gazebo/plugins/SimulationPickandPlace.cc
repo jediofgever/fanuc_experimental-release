@@ -141,7 +141,7 @@ void SimulationPickandPlace::OnUpdate() {
 
         // If this distance is lower than 0.06 meters, that means the Robot Has detected this object and is trying to
         // pick the object So we enter a pick-place piplene to perfrom manipulation on this object
-        if (distance_to_tool_link_meters < 0.03) {
+        if (distance_to_tool_link_meters < 0.06) {
             // ROS_INFO("PICKING OBJECT");
 
             // Attach the object to the gripper, with a litlle ofset in z axis
@@ -156,28 +156,41 @@ void SimulationPickandPlace::OnUpdate() {
             current_object_tobe_picked->SetGravityMode(false);
 
             // Where should this object placed ? , first go to default home_pose
-            ignition::math::Vector3d home_pose_world_frame;
-            home_pose_world_frame[0] = 0.445;
-            home_pose_world_frame[1] = 0.450;
-            home_pose_world_frame[2] = 0.2;
+            std::vector<ignition::math::Vector3d> placing_poses_vector;
+            ignition::math::Vector3d placing_pose;
+            placing_pose[0] = 0.550;
+            placing_pose[1] = 0.350;
+            placing_pose[2] = 0.2;
+            placing_poses_vector.push_back(placing_pose);
+            placing_pose[0] -= 0.15;
+            placing_poses_vector.push_back(placing_pose);
+            placing_pose[0] -= 0.15;
+            placing_poses_vector.push_back(placing_pose);
+            placing_pose[1] += 0.15;
+            placing_poses_vector.push_back(placing_pose);
+            placing_pose[0] += 0.15;
+            placing_poses_vector.push_back(placing_pose);
+            placing_pose[0] += 0.15;
+            placing_poses_vector.push_back(placing_pose);
 
             // get the distance of gripper link and home pose, to see if gripper has arrived to home pose, to place the
             // object
-            double distance_to_home_pose =
-                getDistanceBetweenPoints(gripper_link_position_world_frame, home_pose_world_frame);
+            for (int l = 0; l < placing_poses_vector.size(); l++) {
+                double distance_to_home_pose =
+                    getDistanceBetweenPoints(gripper_link_position_world_frame, placing_poses_vector[l]);
 
-            // if distance lower than 3 cm , then place the object to place_pose
-            if (distance_to_home_pose < 0.03) {
-                // ROS_INFO("PLACING OBJECT");
-                ignition::math::Pose3d place_pose(home_pose_world_frame[0] + fRand(-0.1, 0.2),
-                                                  home_pose_world_frame[1] + fRand(-0.1, 0.4),
-                                                  (home_pose_world_frame[2] - 0.04), 0, -1, 0, 0);
+                // if distance lower than 3 cm , then place the object to place_pose
+                if (distance_to_home_pose < 0.01) {
+                    // ROS_INFO("PLACING OBJECT");
+                    ignition::math::Pose3d place_pose(placing_poses_vector[l][0], placing_poses_vector[l][1] + 0.05,
+                                                      (placing_poses_vector[l][2] - 0.04), 0, -1, 0, 0);
 
-                // place the object
-                current_object_tobe_picked->SetWorldPose(place_pose, true, true);
+                    // place the object
+                    current_object_tobe_picked->SetWorldPose(place_pose, true, true);
 
-                // eneable bacjk the gravity for object
-                current_object_tobe_picked->SetGravityMode(true);
+                    // eneable bacjk the gravity for object
+                    current_object_tobe_picked->SetGravityMode(true);
+                }
             }
         }
 
@@ -210,7 +223,7 @@ void SimulationPickandPlace::OnUpdate() {
         } catch (tf::TransformException ex) {
             // ROS_ERROR("%s", ex.what());
             return;
-            ros::Duration(1.0).sleep();
+            ros::Duration(0.1).sleep();
         }
 
         // get pose in camera frame
