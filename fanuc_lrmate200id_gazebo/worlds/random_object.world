@@ -1509,10 +1509,130 @@
       <pose frame=''>-0.824856 0.000555 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>1414 287000000</sim_time>
-      <real_time>97 922915131</real_time>
-      <wall_time>1582708896 224549896</wall_time>
-      <iterations>93045</iterations>
+      <sim_time>3183 451000000</sim_time>
+      <real_time>1936 492638870</real_time>
+      <wall_time>1583820522 416496378</wall_time>
+      <iterations>1769164</iterations>
+      <model name='beer'>
+        <pose frame=''>0.232044 -0.477522 0.161697 5e-06 1.8e-05 0.003842</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.232046 -0.477522 0.276697 5e-06 1.8e-05 0.003842</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.006097 -0.000901 19.5857 -0.001607 0.05425 0.019044</acceleration>
+          <wrench>0.002378 -0.000351 7.63844 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bottle_beer'>
+        <pose frame=''>0.635871 -0.207301 0.159763 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_2'>
+          <pose frame=''>0.636275 -0.207226 0.159763 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_3'>
+          <pose frame=''>0.635467 -0.207376 0.159763 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bottle_beer_clone'>
+        <pose frame=''>0.552885 -0.134048 0.159763 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_2'>
+          <pose frame=''>0.553289 -0.133973 0.159763 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_3'>
+          <pose frame=''>0.552481 -0.134123 0.159763 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='bottle_red_wine'>
+        <pose frame=''>0.248221 -0.233075 0.163262 0 0.910709 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_22'>
+          <pose frame=''>0.226596 -0.266881 0.195612 0 0.910709 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_23'>
+          <pose frame=''>0.226596 -0.266881 0.195612 0 0.910709 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='coca_cola_clone'>
+        <pose frame=''>0.36522 -0.227795 0.191848 -1.57073 0.385018 -0.388511</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.408786 -0.121367 0.191855 -1.57073 0.385018 -0.388511</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 -0 -0 -0</acceleration>
+          <wrench>0 0 -3.822 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='coca_cola_clone_clone'>
+        <pose frame=''>-6.21429 -3.7061 0.030163 1.57085 0.229567 0.213436</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-6.18994 -3.81849 0.030157 1.57085 0.229567 0.213436</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -3.822 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='coca_cola_clone_clone_0'>
+        <pose frame=''>0.248543 -0.445742 0.19186 -1.57086 0.385018 -0.38856</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.292109 -0.339314 0.191853 -1.57086 0.385018 -0.38856</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -3.822 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='coke_can_clone'>
+        <pose frame=''>0.322712 -0.156352 0.193252 -1.54041 1.18397 1.46315</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.322712 -0.156352 0.193252 -1.54041 1.18397 1.46315</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-2.9e-05 -0.000143 3e-06 0.014111 -0.002218 -0.000118</acceleration>
+          <wrench>-1.1e-05 -5.6e-05 1e-06 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cup_green'>
+        <pose frame=''>0.508404 -0.235804 0.179835 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_7'>
+          <pose frame=''>0.508404 -0.235804 0.179835 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_8'>
+          <pose frame=''>0.508404 -0.235804 0.179835 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_9'>
+          <pose frame=''>0.508404 -0.235804 0.179835 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -1523,71 +1643,17 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='pulley_part_aria2'>
-        <pose frame=''>0.405417 -0.147423 0.168243 0 -0.287146 0</pose>
+      <model name='plate_1'>
+        <pose frame=''>0.524929 -0.462037 0.195458 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.405417 -0.147423 0.168243 0 -0.287146 0</pose>
+        <link name='link_10'>
+          <pose frame=''>0.524929 -0.462037 0.195458 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-      </model>
-      <model name='pulley_part_aria2_clone'>
-        <pose frame=''>0.405703 0.128214 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.405703 0.128214 0.147062 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone_0'>
-        <pose frame=''>0.287214 -0.02996 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.287214 -0.02996 0.147062 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone_0_clone'>
-        <pose frame=''>0.538792 0.215136 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.538792 0.215136 0.147062 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone_1'>
-        <pose frame=''>0.288971 0.205856 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.288971 0.205856 0.147062 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone_2'>
-        <pose frame=''>0.554843 -0.147 0.168243 -0.412642 -0.104581 -0.069385</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.554843 -0.147 0.168243 -0.412642 -0.104581 -0.069385</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria3'>
-        <pose frame=''>0.49235 0.00854 0.137078 0 -0 3.14159</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac::link'>
-          <pose frame=''>0.49235 0.00854 0.137078 0 -0 3.14159</pose>
+        <link name='link_11'>
+          <pose frame=''>0.524929 -0.462037 0.195458 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1604,20 +1670,20 @@
         </link>
       </model>
       <model name='workcell_bin'>
-        <pose frame=''>0.380586 0.603623 -0.600898 0 -0 0</pose>
+        <pose frame=''>0.44479 0.388997 -0.567859 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0.380586 0.603623 -0.600898 0 -0 0</pose>
+          <pose frame=''>0.44479 0.388997 -0.567859 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='workcell_bin_clone'>
-        <pose frame=''>-0.433055 -0.81208 -0.563304 0 -0 0</pose>
+        <pose frame=''>0.437389 -0.299867 -0.563304 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-0.433055 -0.81208 -0.563304 0 -0 0</pose>
+          <pose frame=''>0.437389 -0.299867 -0.563304 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1629,7 +1695,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-1.47487 2.63228 2.47586 -0 0.781798 -0.828643</pose>
+        <pose frame=''>-1.69169 0.08892 2.57073 -0 0.777797 -0.038261</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -1872,148 +1938,36 @@
       </link>
       <pose frame=''>0.389128 -1.10309 0 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>1.28453 -9 0.96 0 -0 0</pose>
-    </model>
-    <model name='pulley_part_aria3'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac::link'>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>1.28453 -5.4 0.96 0 -0 0</pose>
-    </model>
     <plugin name='sim_pickplace' filename='libsim_pickplace.so'/>
-    <model name='pulley_part_aria2_clone'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
+    <model name='cup_green'>
+      <link name='link_7'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
+            <mesh>
+              <uri>model://cup_green/meshes/outer_green.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.3843 0.8588 0.2745 1</ambient>
+            <diffuse>0.3843 0.8588 0.2745 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://cup_green/meshes/outer_green.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
           <surface>
             <contact>
@@ -2027,52 +1981,140 @@
               <ode/>
             </friction>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.405703 0.128214 0.147062 0 -0 0</pose>
+      <link name='link_8'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://cup_green/meshes/inner_red.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.7411 0.2196 0.1568 1</ambient>
+            <diffuse>0.7411 0.2196 0.1568 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://cup_green/meshes/inner_red.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_9'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://cup_green/meshes/edges.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://cup_green/meshes/edges.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>1.34986 -0.42514 0 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2_clone_0'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
+    <model name='bottle_beer'>
+      <link name='link_2'>
+        <pose frame=''>0.000404 7.5e-05 0 0 -0 0</pose>
+        <visual name='visual'>
           <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
+            <mesh>
+              <uri>model://bottle_beer/meshes/beer_bottle.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.035 0.415 0.098 1</ambient>
+            <diffuse>0.035 0.415 0.098 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0.4</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/beer_bottle.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
           <surface>
             <contact>
@@ -2086,52 +2128,96 @@
               <ode/>
             </friction>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.287214 -0.02996 0.147062 0 -0 0</pose>
+      <link name='link_3'>
+        <pose frame=''>-0.000404 -7.5e-05 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.694 0.686 0.023 1</ambient>
+            <diffuse>0.694 0.686 0.023 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>1.56087 -1.65447 0 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2_clone_1'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
+    <model name='bottle_red_wine'>
+      <link name='link_22'>
+        <pose frame=''>-0.038814 -0.033806 0.002754 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
+            <mesh>
+              <uri>model://bottle_red_wine/meshes/bottle.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.215 0 0.305 1</ambient>
+            <diffuse>0.215 0 0.305 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0.4</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_red_wine/meshes/bottle.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
           <surface>
             <contact>
@@ -2145,52 +2231,114 @@
               <ode/>
             </friction>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.288971 0.205856 0.147062 0 -0 0</pose>
+      <link name='link_23'>
+        <pose frame=''>-0.038814 -0.033806 0.002754 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_red_wine/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.623 0 0.282 1</ambient>
+            <diffuse>0.623 0 0.282 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_red_wine/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <enable_wind>0</enable_wind>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>1.47751 -1.32391 0 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2_clone_0_clone'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
+    <model name='plate_1'>
+      <link name='link_10'>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
+            <mesh>
+              <uri>model://plate_1/meshes/plate_1_body.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>0.9 0.9 0.9 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://plate_1/meshes/plate_1_body.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
           <surface>
             <contact>
@@ -2204,52 +2352,360 @@
               <ode/>
             </friction>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.538792 0.215136 0.147062 0 -0 0</pose>
+      <link name='link_11'>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://plate_1/meshes/plate_1_line.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://plate_1/meshes/plate_1_line.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>1.73962 -1.40361 0 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2_clone_2'>
-      <plugin name='model_push' filename='libmodel_push.so'/>
-      <plugin name='random_model_push' filename='librandom_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
+    <model name='coca_cola_clone'>
+      <link name='link'>
+        <pose frame=''>0 0 0.115 0 -0 0</pose>
         <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
+          <mass>0.39</mass>
           <inertia>
-            <ixx>0.00191582</ixx>
+            <ixx>0.00058</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
+            <iyy>0.00058</iyy>
             <iyz>0</iyz>
-            <izz>0.00341991</izz>
+            <izz>0.00019</izz>
           </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
+        <collision name='collision'>
           <geometry>
             <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
+              <radius>0.0301625</radius>
+              <length>0.12065</length>
             </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='bodyMesh'>
+          <geometry>
+            <mesh>
+              <uri>model://coca_cola/meshes/coke.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.365571 -0.227605 0.153556 -0.505664 0.19683 -0.048512</pose>
+    </model>
+    <model name='coca_cola_clone_clone'>
+      <link name='link'>
+        <pose frame=''>0 0 0.115 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.0301625</radius>
+              <length>0.12065</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='bodyMesh'>
+          <geometry>
+            <mesh>
+              <uri>model://coca_cola/meshes/coke.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.205475 -0.35839 0.191847 -1.57072 0.385018 -0.388411</pose>
+    </model>
+    <model name='beer'>
+      <link name='link'>
+        <pose frame=''>0 0 0.115 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.055</radius>
+              <length>0.23</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.055</radius>
+              <length>0.23</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://beer/materials/scripts</uri>
+              <uri>model://beer/materials/textures</uri>
+              <name>Beer/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>1.23671 -0.477967 0 0 -0 0</pose>
+    </model>
+    <model name='coca_cola_clone_clone_0'>
+      <link name='link'>
+        <pose frame=''>0 0 0.115 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.0301625</radius>
+              <length>0.12065</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='bodyMesh'>
+          <geometry>
+            <mesh>
+              <uri>model://coca_cola/meshes/coke.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.248543 -0.445746 0.191847 -1.57073 0.385018 -0.388496</pose>
+    </model>
+    <model name='coke_can_clone'>
+      <link name='link'>
+        <inertial>
+          <pose frame=''>0 0 0.06 0 -0 0</pose>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00055575</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00055575</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001755</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <pose frame=''>0.003937 0.004724 -0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://coke_can/meshes/coke_can.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+                <min_depth>0.001</min_depth>
+                <max_vel>0.1</max_vel>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0.003937 0.004724 -0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://coke_can/meshes/coke_can.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.322529 -0.155945 0.193743 -1.55979 1.19546 1.44544</pose>
+    </model>
+    <model name='bottle_beer_clone'>
+      <link name='link_2'>
+        <pose frame=''>0.000404 7.5e-05 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/beer_bottle.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.035 0.415 0.098 1</ambient>
+            <diffuse>0.035 0.415 0.098 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0.4</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/beer_bottle.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
           </geometry>
           <surface>
             <contact>
@@ -2263,28 +2719,62 @@
               <ode/>
             </friction>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.554843 -0.147 0.168243 0 -0.287146 0</pose>
+      <link name='link_3'>
+        <pose frame=''>-0.000404 -7.5e-05 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.694 0.686 0.023 1</ambient>
+            <diffuse>0.694 0.686 0.023 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <geometry>
+            <mesh>
+              <uri>model://bottle_beer/meshes/cap.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>0.552885 -0.134048 0.159763 0 -0 0</pose>
     </model>
   </world>
 </sdf>
