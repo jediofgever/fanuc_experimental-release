@@ -21,6 +21,7 @@
 #include <fanuc_arm_perception_utilities/utils.h>
 #include <jsk_recognition_msgs/BoundingBox.h>
 #include <jsk_recognition_msgs/BoundingBoxArray.h>
+#include <std_msgs/Bool.h>
 
 namespace gazebo {
 
@@ -41,6 +42,8 @@ class SimulationPickandPlace : public WorldPlugin {
 
     // Publish ground truth 3d box of each object for pick and place
     ros::Publisher gtBBX_pub_;
+
+    ros::Publisher ros_pub_to_see_if_robot_is_in_scan_pose_pub_;
 
     // Listener for TF tree
     tf::TransformListener *listener_;

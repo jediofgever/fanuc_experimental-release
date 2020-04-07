@@ -23,6 +23,8 @@ SimulationPickandPlace::SimulationPickandPlace() {
 
     // register publisher for ground truth object boxes, mainly for visualzu=izations in RVIZ
     gtBBX_pub_ = nh_->advertise<jsk_recognition_msgs::BoundingBoxArray>("/gt_labels", 1);
+
+    ros_pub_to_see_if_robot_is_in_scan_pose_pub_ = nh_->advertise<std_msgs::Bool>("is_robot_in_scan_pose", 1);
 }
 
 /**
@@ -180,7 +182,7 @@ void SimulationPickandPlace::OnUpdate() {
                     getDistanceBetweenPoints(gripper_link_position_world_frame, placing_poses_vector[l]);
 
                 // if distance lower than 3 cm , then place the object to place_pose
-                if (distance_to_home_pose < 0.01) {
+                if (distance_to_home_pose < 0.04) {
                     // ROS_INFO("PLACING OBJECT");
                     ignition::math::Pose3d place_pose(placing_poses_vector[l][0], placing_poses_vector[l][1] + 0.05,
                                                       (placing_poses_vector[l][2] - 0.04), 0, -1, 0, 0);
@@ -193,6 +195,21 @@ void SimulationPickandPlace::OnUpdate() {
                 }
             }
         }
+
+        ignition::math::Vector3d scan_pose;
+        scan_pose[0] = 0.297;
+        scan_pose[1] = 0.0;
+        scan_pose[2] = 0.857;
+        double distance_to_scan_pose = getDistanceBetweenPoints(gripper_link_position_world_frame, scan_pose);
+
+        std_msgs::Bool bool_val;
+
+        if (distance_to_scan_pose < 0.1) {
+            bool_val.data = true;
+        } else {
+            bool_val.data = false;
+        }
+        ros_pub_to_see_if_robot_is_in_scan_pose_pub_.publish(bool_val);
 
         // get Bounding box of this object to be picked
         ignition::math::Box box = current_object_tobe_picked->BoundingBox();
