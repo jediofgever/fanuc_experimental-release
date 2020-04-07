@@ -1,6 +1,7 @@
 <launch>
   <!-- The planning and execution components of MoveIt! configured to run -->
   <!-- using the ROS-Industrial interface. -->
+  <param name="use_sim" type="bool" value="false" />  
 
   <include file="$(find fanuc_arm_perception_utilities)/launch/robot_vision_system.launch">
   </include>
