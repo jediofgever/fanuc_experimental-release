@@ -13,10 +13,11 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
     <!-- Load parameters to model's main link-->
     <xacro:property name="deg_to_rad" value="0.01745329251994329577" />
     <gazebo reference="${reference_link}">
+      <turnGravityOff>true</turnGravityOff>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
-      <gravity>1</gravity>
+      <gravity>0</gravity>
       <!--<mu>1</mu>-->
       <mu2>1</mu2>
       <fdir1>0 0 0</fdir1>
@@ -136,7 +137,7 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
       	<rangeMinDepth>0.2</rangeMinDepth>
       	<rangeMaxDepth>10.0</rangeMaxDepth>
       	<pointCloud>true</pointCloud>
-      	<pointCloudTopicName>depth/points</pointCloudTopicName>
+      	<pointCloudTopicName>depth/color/points</pointCloudTopicName>
       	<pointCloudCutoff>0.5</pointCloudCutoff>
       </plugin>
     </gazebo>
