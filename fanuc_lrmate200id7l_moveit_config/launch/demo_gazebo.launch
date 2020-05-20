@@ -1,6 +1,6 @@
 <launch>
 
-  <param name="use_sim" type="bool" value="true" />  
+  <param name="is_using_sim" type="bool" value="true" />  
 
   <include file="$(find fanuc_arm_perception_utilities)/launch/robot_vision_system.launch">
   </include>
