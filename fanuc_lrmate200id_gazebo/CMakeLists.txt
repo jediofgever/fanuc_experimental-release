@@ -10,6 +10,9 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_plugins
   roscpp
   fanuc_arm_perception_utilities
+  image_transport
+  camera_info_manager
+  sensor_msgs
  )
 
 find_package(gazebo 9 REQUIRED)
@@ -24,11 +27,14 @@ include_directories(include ${fanuc_arm_perception_utilities_INCLUDE_DIRS})
 include_directories(include ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/include/)
 
 catkin_package(
-  #INCLUDE_DIRS  ${GAZEBO_INCLUDE_DIRS}
   LIBRARIES  
-  CATKIN_DEPENDS roscpp gazebo_ros  
-#  DEPENDS system_lib EIGEN3 fanuc_arm_perception_utilities
-)  
+  CATKIN_DEPENDS 
+  roscpp 
+  gazebo_ros 
+  image_transport
+  camera_info_manager
+  sensor_msgs
+ )  
 
 set(SOURCES
       ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/src/pickplace/PickandPlacer.cpp
@@ -46,6 +52,13 @@ add_library(sim_pickplace SHARED plugins/SimulationPickandPlace.cc  ${SOURCES})
 target_link_libraries(sim_pickplace ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES} ${OpenCV_LIBS} ${fanuc_arm_perception_utilities})
 install(TARGETS sim_pickplace DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 add_dependencies(sim_pickplace ${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_library(realsense_gazebo_plugin
+    plugins/RealSensePlugin.cpp
+    plugins/gazebo_ros_realsense.cpp
+)
+target_link_libraries(realsense_gazebo_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+add_dependencies(realsense_gazebo_plugin ${catkin_EXPORTED_TARGETS})
 
 
 install(TARGETS  
