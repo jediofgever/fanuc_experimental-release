@@ -83,22 +83,22 @@ void SimulationPickandPlace::OnUpdate() {
     // To check base link pose
     physics::LinkPtr base_link;
 
-    // stores postion vector of gripper link whch is world frame
+    // stores postion vector of gripper link which is world frame
     ignition::math::Vector3d gripper_link_position_world_frame;
 
-    // stores postion vector of base link whch is world frame
+    // stores postion vector of base link which is world frame
     ignition::math::Vector3d base_link_position_world_frame;
 
     // First lets get all the models in this world
-    physics::Model_V models_vector = world->Models();
+    physics::Model_V all_models_in_this_world = world->Models();
 
     // Go through all models
-    for (int i = 0; i < models_vector.size(); i++) {
+    for (int i = 0; i < all_models_in_this_world.size(); i++) {
         // Get current model name
-        std::string current_model_name = models_vector[i]->GetName();
+        std::string current_model_name = all_models_in_this_world[i]->GetName();
 
         // get current model pointer itself
-        physics::ModelPtr current_model = models_vector[i];
+        physics::ModelPtr current_model = all_models_in_this_world[i];
 
         // Find Robot model and get Robot's links poses (base link and gripper link)
         if (current_model_name == robot_model_name) {
@@ -110,7 +110,7 @@ void SimulationPickandPlace::OnUpdate() {
 
         // Find object to be picked and store them into objects_tobe_picked vector. Since all these objects begins with
         // pulley
-        // we chechk if the string starts with this substring whuch is "pulley"
+        // we chechk if the string starts with this substring which is "pulley"
         if (current_model_name.substr(0, 6) == "pulley") {
             // store this obejct in objects_tobe_picked
             objects_tobe_picked.push_back(current_model);
@@ -143,7 +143,7 @@ void SimulationPickandPlace::OnUpdate() {
 
         // If this distance is lower than 0.06 meters, that means the Robot Has detected this object and is trying to
         // pick the object So we enter a pick-place piplene to perfrom manipulation on this object
-        if (distance_to_tool_link_meters < 0.06) {
+        if (distance_to_tool_link_meters < 0.08) {
             // ROS_INFO("PICKING OBJECT");
 
             // Attach the object to the gripper, with a litlle ofset in z axis
@@ -175,13 +175,13 @@ void SimulationPickandPlace::OnUpdate() {
             placing_pose[0] += 0.15;
             placing_poses_vector.push_back(placing_pose);
 
-            // get the distance of gripper link and home pose, to see if gripper has arrived to home pose, to place the
-            // object
+            // get the distance of gripper link and place pose, to see if gripper has arrived to place pose, to place
+            // the object
             for (int l = 0; l < placing_poses_vector.size(); l++) {
                 double distance_to_home_pose =
                     getDistanceBetweenPoints(gripper_link_position_world_frame, placing_poses_vector[l]);
 
-                // if distance lower than 3 cm , then place the object to place_pose
+                // if distance lower than 4 cm , then place the object to place_pose
                 if (distance_to_home_pose < 0.04) {
                     // ROS_INFO("PLACING OBJECT");
                     ignition::math::Pose3d place_pose(placing_poses_vector[l][0], placing_poses_vector[l][1] + 0.05,
@@ -190,26 +190,11 @@ void SimulationPickandPlace::OnUpdate() {
                     // place the object
                     current_object_tobe_picked->SetWorldPose(place_pose, true, true);
 
-                    // eneable bacjk the gravity for object
+                    // eneable back the gravity for object
                     current_object_tobe_picked->SetGravityMode(true);
                 }
             }
         }
-
-        ignition::math::Vector3d scan_pose;
-        scan_pose[0] = 0.297;
-        scan_pose[1] = 0.0;
-        scan_pose[2] = 0.857;
-        double distance_to_scan_pose = getDistanceBetweenPoints(gripper_link_position_world_frame, scan_pose);
-
-        std_msgs::Bool bool_val;
-
-        if (distance_to_scan_pose < 0.1) {
-            bool_val.data = true;
-        } else {
-            bool_val.data = false;
-        }
-        ros_pub_to_see_if_robot_is_in_scan_pose_pub_.publish(bool_val);
 
         // get Bounding box of this object to be picked
         ignition::math::Box box = current_object_tobe_picked->BoundingBox();
@@ -240,7 +225,6 @@ void SimulationPickandPlace::OnUpdate() {
         } catch (tf::TransformException ex) {
             // ROS_ERROR("%s", ex.what());
             return;
-            ros::Duration(0.1).sleep();
         }
 
         // get pose in camera frame
@@ -258,9 +242,9 @@ void SimulationPickandPlace::OnUpdate() {
         jsk_box_msg.pose.position = pose_in_camera_frame.position;
         jsk_box_msg.pose.orientation = pose_in_camera_frame.orientation;
 
-        jsk_box_msg.dimensions.x = 0.125;  // 0.112
-        jsk_box_msg.dimensions.y = 0.125;  // 0.112
-        jsk_box_msg.dimensions.z = 0.07;   // 0.05
+        jsk_box_msg.dimensions.x = 0.112;  // 0.112
+        jsk_box_msg.dimensions.y = 0.112;  // 0.112
+        jsk_box_msg.dimensions.z = 0.05;   // 0.05
         gt_box_array.boxes.push_back(jsk_box_msg);
     }
     gtBBX_pub_.publish(gt_box_array);
