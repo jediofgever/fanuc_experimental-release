@@ -120,7 +120,7 @@ void SimulationPickandPlace::OnUpdate() {
     // We will publish JSK boxes in RVIZ for visuaization
     jsk_recognition_msgs::BoundingBoxArray gt_box_array;
     // These boxes should be in camera frame
-    gt_box_array.header.frame_id = "camera_link";
+    gt_box_array.header.frame_id = "camera_depth_optical_frame";
 
     // stamp their time to now
     gt_box_array.header.stamp = ros::Time::now();
@@ -218,29 +218,30 @@ void SimulationPickandPlace::OnUpdate() {
         tf::Transform pose_in_world_frame_tf;
         tf::poseMsgToTF(pose_in_world_frame, pose_in_world_frame_tf);
 
-        tf::StampedTransform world_to_camera_link_transform;
+        tf::StampedTransform world_to_depth_camera_link_transform;
         // lookup transform (this should be cached, since it’s probably static)
         try {
-            listener_->lookupTransform("camera_link", "world", ros::Time(0.0f), world_to_camera_link_transform);
+            listener_->lookupTransform("camera_depth_optical_frame", "world", ros::Time(0.0f),
+                                       world_to_depth_camera_link_transform);
         } catch (tf::TransformException ex) {
             // ROS_ERROR("%s", ex.what());
             return;
         }
 
         // get pose in camera frame
-        tf::Transform pose_in_camera_frame_tf;
-        pose_in_camera_frame_tf = world_to_camera_link_transform * pose_in_world_frame_tf;
+        tf::Transform pose_in_depth_camera_link_tf;
+        pose_in_depth_camera_link_tf = world_to_depth_camera_link_transform * pose_in_world_frame_tf;
 
-        geometry_msgs::Pose pose_in_camera_frame;
-        tf::poseTFToMsg(pose_in_camera_frame_tf, pose_in_camera_frame);
+        geometry_msgs::Pose pose_in_depth_camera_link;
+        tf::poseTFToMsg(pose_in_depth_camera_link_tf, pose_in_depth_camera_link);
 
         // FILL out JSK bounding box msg infor and publish them for RVIZ
         jsk_recognition_msgs::BoundingBox jsk_box_msg;
-        jsk_box_msg.header.frame_id = "camera_link";
+        jsk_box_msg.header.frame_id = "camera_depth_optical_frame";
         jsk_box_msg.header.stamp = ros::Time::now();
         jsk_box_msg.label = o;
-        jsk_box_msg.pose.position = pose_in_camera_frame.position;
-        jsk_box_msg.pose.orientation = pose_in_camera_frame.orientation;
+        jsk_box_msg.pose.position = pose_in_depth_camera_link.position;
+        jsk_box_msg.pose.orientation = pose_in_depth_camera_link.orientation;
 
         jsk_box_msg.dimensions.x = 0.112;  // 0.112
         jsk_box_msg.dimensions.y = 0.112;  // 0.112
