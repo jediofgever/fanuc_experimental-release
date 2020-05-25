@@ -31,8 +31,8 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>640</width>
+            <height>480</height>
             <format>RGB_INT8</format>
           </image>
           <clip>
@@ -53,8 +53,8 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>640</width>
+            <height>480</height>
             <format>L_INT8</format>
           </image>
           <clip>
@@ -68,15 +68,15 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
           </noise>
         </camera>
         <always_on>1</always_on>
-        <update_rate>90</update_rate>
+        <update_rate>1</update_rate>
         <visualize>0</visualize>
       </sensor>
       <sensor name="${camera_name}ired2" type="camera">
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>640</width>
+            <height>480</height>
             <format>L_INT8</format>
           </image>
           <clip>
@@ -90,15 +90,15 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
           </noise>
         </camera>
         <always_on>1</always_on>
-        <update_rate>90</update_rate>
+        <update_rate>1</update_rate>
         <visualize>0</visualize>
       </sensor>
       <sensor name="${camera_name}depth" type="depth">
         <camera name="${camera_name}">
           <horizontal_fov>${85.2*deg_to_rad}</horizontal_fov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>640</width>
+            <height>480</height>
           </image>
           <clip>
             <near>0.1</near>
@@ -111,16 +111,16 @@ This is the Gazebo URDF model for the Intel RealSense D435 camera
           </noise>
         </camera>
         <always_on>1</always_on>
-        <update_rate>90</update_rate>
+        <update_rate>30</update_rate>
         <visualize>0</visualize>
       </sensor>
     </gazebo>
     <gazebo>
       <plugin name="${topics_ns}" filename="librealsense_gazebo_plugin.so">
         <prefix>${camera_name}</prefix>
-      	<depthUpdateRate>60.0</depthUpdateRate>
-      	<colorUpdateRate>60.0</colorUpdateRate>
-      	<infraredUpdateRate>60.0</infraredUpdateRate>
+      	<depthUpdateRate>30.0</depthUpdateRate>
+      	<colorUpdateRate>30.0</colorUpdateRate>
+      	<infraredUpdateRate>1.0</infraredUpdateRate>
       	<depthTopicName>aligned_depth_to_color/image_raw</depthTopicName>
       	<depthCameraInfoTopicName>depth/camera_info</depthCameraInfoTopicName>
       	<colorTopicName>color/image_raw</colorTopicName>
