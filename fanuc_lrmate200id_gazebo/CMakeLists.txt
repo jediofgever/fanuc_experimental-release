@@ -9,7 +9,6 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   gazebo_plugins
   roscpp
-  fanuc_arm_perception_utilities
   image_transport
   camera_info_manager
   sensor_msgs
@@ -23,9 +22,7 @@ endif()
 
 
 include_directories(include ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS} ${SDFormat_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIR}  )
-include_directories(include ${fanuc_arm_perception_utilities_INCLUDE_DIRS})
-include_directories(include ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/include/)
-
+ 
 catkin_package(
   LIBRARIES  
   CATKIN_DEPENDS 
@@ -36,28 +33,35 @@ catkin_package(
   sensor_msgs
  )  
 
+add_library(fanuc_lrmate200id_gazebo_model_push SHARED plugins/MoveObject.cc)
+target_link_libraries(fanuc_lrmate200id_gazebo_model_push ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 
-add_library(model_push SHARED plugins/MoveObject.cc)
-target_link_libraries(model_push ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
+add_library(fanuc_lrmate200id_gazebo_random_model_push SHARED plugins/RandomMoveObject.cc)
+target_link_libraries(fanuc_lrmate200id_gazebo_random_model_push ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 
-add_library(random_model_push SHARED plugins/RandomMoveObject.cc)
-target_link_libraries(random_model_push ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
+add_library(fanuc_lrmate200id_gazebo_pick_place SHARED plugins/SimulationPickandPlace.cc  ${SOURCES})
+target_link_libraries(fanuc_lrmate200id_gazebo_pick_place ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES} ${OpenCV_LIBS} ${fanuc_arm_perception_utilities})
+add_dependencies(fanuc_lrmate200id_gazebo_pick_place ${PROJECT_NAME}_EXPORTED_TARGETS})
 
-add_library(sim_pickplace SHARED plugins/SimulationPickandPlace.cc  ${SOURCES})
-target_link_libraries(sim_pickplace ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES} ${OpenCV_LIBS} ${fanuc_arm_perception_utilities})
-install(TARGETS sim_pickplace DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-add_dependencies(sim_pickplace ${PROJECT_NAME}_EXPORTED_TARGETS})
-
-add_library(realsense_gazebo_plugin
+add_library(fanuc_lrmate200id_gazebo_realsense_gazebo_plugin
     plugins/RealSensePlugin.cpp
     plugins/gazebo_ros_realsense.cpp
 )
-target_link_libraries(realsense_gazebo_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
-add_dependencies(realsense_gazebo_plugin ${catkin_EXPORTED_TARGETS})
+target_link_libraries(fanuc_lrmate200id_gazebo_realsense_gazebo_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+add_dependencies(fanuc_lrmate200id_gazebo_realsense_gazebo_plugin ${catkin_EXPORTED_TARGETS})
 
-
-install(TARGETS  
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#Install Libraries
+install(TARGETS
+    fanuc_lrmate200id_gazebo_model_push 
+    fanuc_lrmate200id_gazebo_random_model_push
+    fanuc_lrmate200id_gazebo_pick_place
+    fanuc_lrmate200id_gazebo_realsense_gazebo_plugin
+    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
+#Install Directory
+install(DIRECTORY config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY meshes DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY urdf DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY worlds DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
