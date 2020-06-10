@@ -36,12 +36,7 @@ catkin_package(
   sensor_msgs
  )  
 
-set(SOURCES
-      ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/src/pickplace/PickandPlacer.cpp
-      ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/src/utils.cpp
-      ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/src/control/RobotController.cpp
-      ~/catkin_ws/src/PICK_PLACE_with_ROS_on_FANUC_ARM/fanuc_arm_perception_utilities/src/pickplace/PickandPlacer.cpp)
- 
+
 add_library(model_push SHARED plugins/MoveObject.cc)
 target_link_libraries(model_push ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 
