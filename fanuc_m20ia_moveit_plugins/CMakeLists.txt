@@ -6,6 +6,9 @@ find_package(catkin REQUIRED COMPONENTS
   pluginlib
   roscpp
   tf_conversions
+  tf2_kdl
+  tf2_eigen
+  eigen_conversions
 )
 
 # enable C++11 if needed for MoveIt on Kinetic
