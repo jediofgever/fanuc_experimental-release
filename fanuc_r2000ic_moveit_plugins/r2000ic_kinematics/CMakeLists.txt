@@ -1,9 +1,9 @@
 
 include_directories(include)
 
-set(IKFAST_LIBRARY_NAME fanuc_lrmate200id_manipulator_moveit_ikfast_plugin)
+set(IKFAST_LIBRARY_NAME fanuc_r2000ic_manipulator_moveit_ikfast_plugin)
 
-add_library(${IKFAST_LIBRARY_NAME} src/fanuc_lrmate200id_manipulator_ikfast_moveit_plugin.cpp)
+add_library(${IKFAST_LIBRARY_NAME} src/fanuc_r2000ic_manipulator_ikfast_moveit_plugin.cpp)
 target_link_libraries(${IKFAST_LIBRARY_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES} ${LAPACK_LIBRARIES})
 
 install(
@@ -11,5 +11,5 @@ install(
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
 
 install(
-  FILES fanuc_lrmate200id_manipulator_moveit_ikfast_plugin_description.xml 
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/lrmate200id_kinematics)
+  FILES fanuc_r2000ic_manipulator_moveit_ikfast_plugin_description.xml 
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/r2000ic_kinematics)
