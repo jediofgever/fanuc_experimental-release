@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- load the joint state controller -->
+  <rosparam file="$(find fanuc_r2000ic_gazebo)/config/joint_state_controller.yaml" command="load" />
+  <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" args="joint_state_controller" />
+
+  <!-- load the arm controller -->
+  <rosparam file="$(find fanuc_r2000ic_gazebo)/config/r2000ic_arm_controller.yaml" command="load" />
+  <node name="r2000ic_gazebo_controller_spawner" pkg="controller_manager" type="spawner" args="arm_controller" />
+</launch>
