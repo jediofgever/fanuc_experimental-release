@@ -1509,45 +1509,15 @@
       <pose frame=''>-0.824856 0.000555 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>1414 287000000</sim_time>
-      <real_time>97 922915131</real_time>
-      <wall_time>1582708896 224549896</wall_time>
-      <iterations>93045</iterations>
+      <sim_time>1475 75000000</sim_time>
+      <real_time>153 201176295</real_time>
+      <wall_time>1592357870 355988238</wall_time>
+      <iterations>60788</iterations>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2'>
-        <pose frame=''>0.405417 -0.147423 0.168243 0 -0.287146 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.405417 -0.147423 0.168243 0 -0.287146 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone'>
-        <pose frame=''>0.405703 0.128214 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.405703 0.128214 0.147062 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone_0'>
-        <pose frame=''>0.287214 -0.02996 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.287214 -0.02996 0.147062 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1563,26 +1533,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='pulley_part_aria2_clone_1'>
-        <pose frame=''>0.288971 0.205856 0.147062 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.288971 0.205856 0.147062 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='pulley_part_aria2_clone_2'>
-        <pose frame=''>0.554843 -0.147 0.168243 -0.412642 -0.104581 -0.069385</pose>
-        <scale>1 1 1</scale>
-        <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-          <pose frame=''>0.554843 -0.147 0.168243 -0.412642 -0.104581 -0.069385</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='pulley_part_aria3'>
         <pose frame=''>0.49235 0.00854 0.137078 0 -0 3.14159</pose>
         <scale>1 1 1</scale>
@@ -1593,31 +1543,131 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='pulley_part_aria3_clone'>
+        <pose frame=''>0.598822 -0.162832 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.598822 -0.162832 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_0'>
+        <pose frame=''>0.675961 -0.066201 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.675961 -0.066201 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_1'>
+        <pose frame=''>0.649788 0.098763 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.649788 0.098763 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_2'>
+        <pose frame=''>0.799075 0.067845 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.799075 0.067845 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_3'>
+        <pose frame=''>0.721742 0.201285 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.721742 0.201285 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_4'>
+        <pose frame=''>0.67835 -0.286986 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.67835 -0.286986 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_5'>
+        <pose frame=''>0.520898 -0.28175 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.520898 -0.28175 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_6'>
+        <pose frame=''>0.82218 -0.14772 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.82218 -0.14772 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_7'>
+        <pose frame=''>0.435663 -0.110362 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.435663 -0.110362 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pulley_part_aria3_clone_8'>
+        <pose frame=''>0.822432 -0.330475 0.137078 0 -0 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='pulley_part_ariac::link'>
+          <pose frame=''>0.822432 -0.330475 0.137078 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='workcell'>
-        <pose frame=''>-0.808857 0.445391 -0.785884 0 -0 1.57</pose>
+        <pose frame=''>-0.577558 0.445207 -0.785884 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-0.808857 0.445391 -0.785884 0 -0 1.57</pose>
+          <pose frame=''>-0.577558 0.445207 -0.785884 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='workcell_bin'>
-        <pose frame=''>0.380586 0.603623 -0.600898 0 -0 0</pose>
+        <pose frame=''>0.593756 0.603623 -0.600898 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0.380586 0.603623 -0.600898 0 -0 0</pose>
+          <pose frame=''>0.593756 0.603623 -0.600898 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='workcell_bin_clone'>
-        <pose frame=''>-0.433055 -0.81208 -0.563304 0 -0 0</pose>
+        <pose frame=''>0.651274 -0.81208 -0.563304 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-0.433055 -0.81208 -0.563304 0 -0 0</pose>
+          <pose frame=''>0.651274 -0.81208 -0.563304 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1629,7 +1679,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-1.47487 2.63228 2.47586 -0 0.781798 -0.828643</pose>
+        <pose frame=''>-2.8716 -0.297283 4.08566 0 0.721798 -0.14628</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -1872,66 +1922,6 @@
       </link>
       <pose frame=''>0.389128 -1.10309 0 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2'>
-      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
-      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <gravity>0</gravity>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>1.28453 -9 0.96 0 -0 0</pose>
-    </model>
     <model name='pulley_part_aria3'>
       <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
       <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
@@ -1993,186 +1983,6 @@
       <pose frame=''>1.28453 -5.4 0.96 0 -0 0</pose>
     </model>
     <plugin name='fanuc_m20ia_gazebo_pick_place' filename='libfanuc_m20ia_gazebo_pick_place.so'/>
-    <model name='pulley_part_aria2_clone'>
-      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
-      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <gravity>0</gravity>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>0.405703 0.128214 0.147062 0 -0 0</pose>
-    </model>
-    <model name='pulley_part_aria2_clone_0'>
-      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
-      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <gravity>0</gravity>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>0.287214 -0.02996 0.147062 0 -0 0</pose>
-    </model>
-    <model name='pulley_part_aria2_clone_1'>
-      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
-      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
-        <gravity>0</gravity>
-        <inertial>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <mass>0.5</mass>
-          <inertia>
-            <ixx>0.00191582</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.00191582</iyy>
-            <iyz>0</iyz>
-            <izz>0.00341991</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision_core'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <length>0.025</length>
-              <radius>0.056</radius>
-            </cylinder>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <pose frame=''>0 0 0.025 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://pulley_part_ariac/materials/scripts</uri>
-              <uri>model://pulley_part_ariac/materials/textures</uri>
-              <name>ArmPart/Diffuse</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose frame=''>0.288971 0.205856 0.147062 0 -0 0</pose>
-    </model>
     <model name='pulley_part_aria2_clone_0_clone'>
       <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
       <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
@@ -2233,10 +2043,13 @@
       </link>
       <pose frame=''>0.538792 0.215136 0.147062 0 -0 0</pose>
     </model>
-    <model name='pulley_part_aria2_clone_2'>
+    <audio>
+      <device>default</device>
+    </audio>
+    <model name='pulley_part_aria3_clone'>
       <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
       <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
-      <link name='pulley_part_ariac_clone::pulley_part_ariac::link'>
+      <link name='pulley_part_ariac::link'>
         <gravity>0</gravity>
         <inertial>
           <pose frame=''>0 0 0.025 0 -0 0</pose>
@@ -2291,7 +2104,547 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.554843 -0.147 0.168243 0 -0.287146 0</pose>
+      <pose frame=''>0.598822 -0.162832 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_0'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.675961 -0.066201 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_1'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.649788 0.098763 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_2'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.799075 0.067845 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_3'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.721742 0.201285 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_4'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.67835 -0.286986 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_5'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.520898 -0.28175 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_6'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.82218 -0.14772 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_7'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.435663 -0.110362 0.137078 0 -0 3.14159</pose>
+    </model>
+    <model name='pulley_part_aria3_clone_8'>
+      <plugin name='fanuc_m20ia_gazebo_model_push' filename='libfanuc_m20ia_gazebo_model_push.so'/>
+      <plugin name='fanuc_m20ia_gazebo_random_model_push' filename='libfanuc_m20ia_gazebo_random_model_push.so'/>
+      <link name='pulley_part_ariac::link'>
+        <gravity>0</gravity>
+        <inertial>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00191582</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00191582</iyy>
+            <iyz>0</iyz>
+            <izz>0.00341991</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision_core'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.025</length>
+              <radius>0.056</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0.025 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://pulley_part_ariac/meshes/object.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pulley_part_ariac/materials/scripts</uri>
+              <uri>model://pulley_part_ariac/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.822432 -0.330475 0.137078 0 -0 3.14159</pose>
     </model>
   </world>
 </sdf>

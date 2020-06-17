@@ -19,7 +19,7 @@
   <arg name="paused" value="$(arg paused)"/>
   <arg name="use_sim_time" value="$(arg use_sim_time)"/>
   <arg name="headless" value="$(arg headless)"/>
-  <!-- arg name="world_name" value="$(find task_1)/world/tutorial_testing.world"/ -->
+  <arg name="world_name" value="$(find fanuc_m20ia_gazebo)/worlds/workcell.world"/> 
   </include>
   </group>
 
