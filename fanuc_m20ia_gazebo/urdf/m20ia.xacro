@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="fanuc_m20ia_gazebo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="fanuc_m20ia" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find fanuc_m20ia_gazebo)/urdf/m20ia_macro.xacro"/>
   <xacro:fanuc_m20ia_robot prefix=""/>
 
