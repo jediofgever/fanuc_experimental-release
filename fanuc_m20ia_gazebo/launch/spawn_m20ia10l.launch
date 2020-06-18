@@ -8,7 +8,7 @@
         output="screen" respawn="false"
         args="-urdf
               -param robot_description
-              -model lrmate200id7l
+              -model m20ia10l
               -x 0.0
               -y 0.0
               -z 0.0
@@ -20,6 +20,6 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
   <!-- init and start Gazebo ros_control interface -->
-  <include file="$(find fanuc_lrmate200id_gazebo)/launch/m20ia10l_control.launch"/>
+  <include file="$(find fanuc_m20ia_gazebo)/launch/m20ia10l_control.launch"/>
   
 </launch>
