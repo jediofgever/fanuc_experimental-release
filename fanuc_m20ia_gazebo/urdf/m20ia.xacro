@@ -1,7 +1,13 @@
 <?xml version="1.0"?>
 <robot name="fanuc_m20ia" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find fanuc_m20ia_gazebo)/urdf/m20ia_macro.xacro"/>
+  <xacro:include filename="$(find fanuc_m20ia_gazebo)/urdf/_d435.urdf.xacro" />
+
   <xacro:fanuc_m20ia_robot prefix=""/>
+
+<sensor_d435 parent="link_6">
+  <origin xyz="0.0248461355134 0.0274223973678 0.088426501091" rpy="0 0 0"/>
+</sensor_d435>
 
   <!-- Fix robot to Gazebo world -->
   <link name="world"/>
