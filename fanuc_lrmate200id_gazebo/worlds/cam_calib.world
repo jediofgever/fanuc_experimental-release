@@ -1,0 +1,497 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>400</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>1585 938000000</sim_time>
+      <real_time>433 226951840</real_time>
+      <wall_time>1592532237 106966664</wall_time>
+      <iterations>171651</iterations>
+      <model name='drone_with_box'>
+        <pose frame=''>0.549307 3.51078 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='box_link'>
+          <pose frame=''>0.549307 3.51078 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='drone::link'>
+          <pose frame=''>0.549307 3.51078 0 0 0 -1.5707</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='drone_with_box_clone'>
+        <pose frame=''>0.58877 -5.93038 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='box_link'>
+          <pose frame=''>0.58877 -5.93038 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='drone::link'>
+          <pose frame=''>0.58877 -5.93038 0 0 0 -1.5707</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='open_box'>
+        <pose frame=''>0.574289 0.071616 -0.000805 -0.000425 0.000133 -0</pose>
+        <scale>1 1 1</scale>
+        <link name='box_base'>
+          <pose frame=''>0.574289 0.071616 -0.000805 -0.000425 0.000133 -0</pose>
+          <velocity>-0 0 -0 0 -0 0</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='visp_marker_100mm'>
+        <pose frame=''>0.851452 0.051265 0.122092 -0.001605 1.56708 -3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.851452 0.051265 0.122092 -0.001605 1.56708 -3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-1.10783 4.23814 2.8885 0 0.489801 -1.33433</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <plugin name='fanuc_lrmate200id_gazebo_pick_place' filename='libfanuc_lrmate200id_gazebo_pick_place.so'/>
+    <audio>
+      <device>default</device>
+    </audio>
+    <model name='open_box'>
+      <static>0</static>
+      <self_collide>0</self_collide>
+      <link name='box_base'>
+        <gravity>1</gravity>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.0408</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.02084</iyy>
+            <iyz>0</iyz>
+            <izz>0.0616</izz>
+          </inertia>
+        </inertial>
+        <sensor name='shipping_box_contact' type='contact'>
+          <update_rate>1</update_rate>
+          <contact>
+            <collision>box_base</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+        </sensor>
+        <collision name='box_base'>
+          <pose frame=''>0 0 0.0015 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <geometry>
+            <box>
+              <size>0.49 0.69 0.001</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name='box_bottom'>
+          <pose frame=''>0 0 0.0005 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <geometry>
+            <box>
+              <size>0.49 0.69 0.001</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name='tray_collision1'>
+          <pose frame=''>0.25 0 0.0127 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <geometry>
+            <box>
+              <size>0.001 0.7 0.0254</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name='tray_collision2'>
+          <pose frame=''>-0.25 0 0.0127 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <geometry>
+            <box>
+              <size>0.001 0.7 0.0254</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name='tray_collision3'>
+          <pose frame=''>0 0.35 0.0127 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <geometry>
+            <box>
+              <size>0.5 0.001 0.0254</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name='tray_collision4'>
+          <pose frame=''>0 -0.35 0.0127 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <geometry>
+            <box>
+              <size>0.5 0.001 0.0254</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='open_box'>
+          <geometry>
+            <mesh>
+              <scale>1.1 1.8 0.25</scale>
+              <uri>model://open_box_ariac/meshes/open_box.obj</uri>
+            </mesh>
+          </geometry>
+          <plugin name='toggle' filename='libToggleVisualPlugin.so'>
+            <initially_visible>1</initially_visible>
+            <topic>~/shipping_box_visual_toggle</topic>
+          </plugin>
+        </visual>
+        <visual name='closed_box'>
+          <geometry>
+            <mesh>
+              <scale>1.1 1.8 0.25</scale>
+              <uri>model://closed_box_ariac/meshes/closed_box.obj</uri>
+            </mesh>
+          </geometry>
+          <plugin name='toggle' filename='libToggleVisualPlugin.so'>
+            <initially_visible>0</initially_visible>
+            <topic>~/shipping_box_visual_toggle</topic>
+          </plugin>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.619086 0.071574 0 0 -0 0</pose>
+    </model>
+    <model name='visp_marker_100mm'>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://visp_marker_100mm/meshes/visp_marker_100mm.dae</uri>
+              <scale>1.125 1.125 1.125</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.383464 0.165193 0 0 -0 0</pose>
+    </model>
+    <model name='drone_with_box'>
+      <static>1</static>
+      <link name='drone::link'>
+        <pose frame=''>0 0 0 0 0 -1.5707</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1.3 1.3 1</scale>
+              <uri>model://drone_ariac/meshes/Drone.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.3 1.3 1</scale>
+              <uri>model://drone_ariac/meshes/Drone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <link name='box_link'>
+        <visual name='box_visual'>
+          <pose frame=''>0 0 -0.13 0 -0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>1.1 1.8 0.25</scale>
+              <uri>model://closed_box_ariac/meshes/closed_box.obj</uri>
+            </mesh>
+          </geometry>
+          <plugin name='toggle' filename='libToggleVisualPlugin.so'>
+            <initially_visible>0</initially_visible>
+            <topic>~/drone_box_visual_toggle</topic>
+          </plugin>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.549307 3.51078 0 0 -0 0</pose>
+    </model>
+    <model name='drone_with_box_clone'>
+      <static>1</static>
+      <link name='drone::link'>
+        <pose frame=''>0 0 0 0 0 -1.5707</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1.3 1.3 1</scale>
+              <uri>model://drone_ariac/meshes/Drone.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.3 1.3 1</scale>
+              <uri>model://drone_ariac/meshes/Drone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <link name='box_link'>
+        <visual name='box_visual'>
+          <pose frame=''>0 0 -0.13 0 -0 1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>1.1 1.8 0.25</scale>
+              <uri>model://closed_box_ariac/meshes/closed_box.obj</uri>
+            </mesh>
+          </geometry>
+          <plugin name='toggle' filename='libToggleVisualPlugin.so'>
+            <initially_visible>0</initially_visible>
+            <topic>~/drone_box_visual_toggle</topic>
+          </plugin>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>0.58877 -5.93038 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>
