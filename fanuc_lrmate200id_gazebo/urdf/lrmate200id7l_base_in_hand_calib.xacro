@@ -11,9 +11,10 @@
 <xacro:fanuc_lrmate200id7l_robot prefix=""/>
 
 <sensor_d435 parent="base_link">
-  <origin xyz="0.9 0.0 0.6" rpy="0 2.35619 0"/>
+  <origin xyz="2.5 0.0 0.8" rpy="0 3.14 0"/>
 </sensor_d435>
-
+ 
+ 
 <link name="aruco_marker_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -21,6 +22,17 @@
         <mesh filename="package://fanuc_lrmate200id_gazebo/meshes/aruco_marker_202_100mm/meshes/aruco_marker_202_100mm.dae"/>
       </geometry>
     </visual>
+    <collision name='collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://fanuc_lrmate200id_gazebo/meshes/aruco_marker_202_100mm/meshes/aruco_marker_202_100mm.dae"/>
+      </geometry>    
+      <surface>
+        <contact>
+          <collide_without_contact>false</collide_without_contact>
+        </contact>
+      </surface>
+    </collision>
 </link>
 
 <joint name="marker-link_6-fixed" type="fixed">
@@ -28,7 +40,7 @@
   <child link="aruco_marker_link"/>
   <origin xyz="0.05 0.0 -0.25" rpy="0.0 0.0 0.0" />
 </joint>
-
+ 
   <!-- Fix robot to Gazebo world -->
   <link name="world"/>
   <joint name="world-base_link-fixed" type="fixed">
