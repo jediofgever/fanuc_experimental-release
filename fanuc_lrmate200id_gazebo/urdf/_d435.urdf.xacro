@@ -35,7 +35,7 @@ aluminum peripherial evaluation case.
     <xacro:property name="d435_cam_depth_pz" value="${d435_cam_height/2}"/>
 
     <material name="${name}_aluminum">
-	  <color rgba="0.5 0.5 0.5 1"/>
+	  <color rgba="0.5 0.8 0.5 1"/>
     </material>
 
 
@@ -48,7 +48,7 @@ aluminum peripherial evaluation case.
     <link name="${name}_bottom_screw_frame"/>
 
     <joint name="${name}_link_joint" type="fixed">
-      <origin xyz="0 ${d435_cam_depth_py} ${d435_cam_depth_pz}" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="${name}_bottom_screw_frame"/>
       <child link="${name}_link" />
     </joint>

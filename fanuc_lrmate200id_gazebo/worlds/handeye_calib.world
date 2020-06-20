@@ -82,15 +82,15 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>1576 651000000</sim_time>
-      <real_time>572 873985175</real_time>
-      <wall_time>1592532376 753999037</wall_time>
-      <iterations>162364</iterations>
-      <model name='aruco_marker_202_100mm'>
-        <pose frame=''>0.311601 0.069729 0.122689 3.14159 1.55829 3.14159</pose>
+      <sim_time>1797 734000000</sim_time>
+      <real_time>557 126289052</real_time>
+      <wall_time>1592615117 933335185</wall_time>
+      <iterations>221083</iterations>
+      <model name='aruco_marker_202_100mm_0'>
+        <pose frame=''>0.853615 0.056829 0.112807 -0.15982 1.56558 2.97896</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0.311601 0.069729 0.122689 3.14159 1.55829 3.14159</pose>
+          <pose frame=''>0.853615 0.056829 0.112807 -0.15982 1.56558 2.97896</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -144,8 +144,8 @@
         <link name='box_base'>
           <pose frame=''>0.569471 0.071616 -0.000794 -0.000425 0.000133 -0</pose>
           <velocity>-0 0 -0 0 -0 0</velocity>
-          <acceleration>-0 -0 0 0 -0 0</acceleration>
-          <wrench>-0 -0 0 0 -0 0</wrench>
+          <acceleration>-0 0 -0 0 -0 0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -154,7 +154,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-5.72704 6.85745 8.90681 0 0.817803 -0.926358</pose>
+        <pose frame=''>-0.929309 4.80973 6.83626 -0 0.917807 -1.28719</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -476,14 +476,14 @@
       </link>
       <pose frame=''>0.58877 -5.93038 0 0 -0 0</pose>
     </model>
-    <model name='aruco_marker_202_100mm'>
+    <model name='aruco_marker_202_100mm_0'>
       <static>1</static>
       <link name='link'>
         <visual name='visual'>
           <geometry>
             <mesh>
               <uri>model://aruco_marker_202_100mm/meshes/aruco_marker_202_100mm.dae</uri>
-              <scale>1.125 1.125 1.125</scale>
+              <scale>1 1 1</scale>
             </mesh>
           </geometry>
         </visual>
@@ -491,7 +491,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0.397939 0.145802 0 0 -0 0</pose>
+      <pose frame=''>0.161743 1.15924 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
