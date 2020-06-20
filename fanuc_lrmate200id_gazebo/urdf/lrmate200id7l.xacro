@@ -7,19 +7,18 @@
 <xacro:include filename="$(find fanuc_lrmate200id_gazebo)/urdf/lrmate200id7l_macro.xacro"/>
 <xacro:include filename="$(find fanuc_lrmate200id_gazebo)/urdf/_d435.urdf.xacro" />
 
-
 <xacro:fanuc_lrmate200id7l_robot prefix=""/>
 
 <sensor_d435 parent="link_6">
-  <origin xyz="0.02 0.02 0.08" rpy="0 0 0"/>
+  <origin xyz="0.02 0.00 0.08" rpy="0 0 0"/>
 </sensor_d435>
 
-  <!-- Fix robot to Gazebo world -->
-  <link name="world"/>
-  <joint name="world-base_link-fixed" type="fixed">
-    <parent link="world"/>
-    <child link="base_link"/>
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-  </joint>
+<!-- Fix robot to Gazebo world -->
+<link name="world"/>
+<joint name="world-base_link-fixed" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+  <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+</joint>
 
 </robot>

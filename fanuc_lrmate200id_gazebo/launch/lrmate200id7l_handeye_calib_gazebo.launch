@@ -19,12 +19,12 @@
   <arg name="paused" value="$(arg paused)"/>
   <arg name="use_sim_time" value="$(arg use_sim_time)"/>
   <arg name="headless" value="$(arg headless)"/>
-  <arg name="world_name" value="$(find fanuc_lrmate200id_gazebo)/worlds/handeye_calib.world"/> 
+  <arg name="world_name" value="$(find fanuc_lrmate200id_gazebo)/worlds/empty_world.world"/> 
   </include>
   </group>
 
   <!-- send robot URDF to ROS param server,
        and spawn robot in Gazebo, along with necessary ROS nodes -->
-  <include file="$(find fanuc_lrmate200id_gazebo)/launch/spawn_lrmate200id7l.launch"/>
+  <include file="$(find fanuc_lrmate200id_gazebo)/launch/spawn_lrmate200id7l_handeye_calib.launch"/>
 
 </launch>

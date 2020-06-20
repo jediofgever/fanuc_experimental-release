@@ -7,15 +7,20 @@
 <xacro:include filename="$(find fanuc_lrmate200id_gazebo)/urdf/lrmate200id7l_macro.xacro"/>
 <xacro:include filename="$(find fanuc_lrmate200id_gazebo)/urdf/_d435.urdf.xacro" />
 
-
 <xacro:fanuc_lrmate200id7l_robot prefix=""/>
 
-<sensor_d435 parent="base_link">
-  <origin xyz="2.5 0.0 0.8" rpy="0 3.14 0"/>
-</sensor_d435>
- 
- 
-<link name="aruco_marker_link">
+<xacro:property name="yaml_file" value="$(find handeye_calib)/cfg/config.yaml" />
+<xacro:property name="props" value="${load_yaml(yaml_file)}"/>
+
+<xacro:property name="eye_in_hand" value="${props['eye_in_hand']}"/>
+<!-- EYE IN HAND CALIBRATION, PLACE MARKER IN FRONT OF ROBOT-->
+<xacro:if value="${eye_in_hand}">
+
+  <sensor_d435 parent="link_6">
+    <origin xyz="0.02 0.00 0.08" rpy="0 0 0"/>
+  </sensor_d435>
+
+  <link name="aruco_marker_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -36,10 +41,48 @@
 </link>
 
 <joint name="marker-link_6-fixed" type="fixed">
-  <parent link="link_6"/>
+  <parent link="base_link"/>
   <child link="aruco_marker_link"/>
-  <origin xyz="0.05 0.0 -0.25" rpy="0.0 0.0 0.0" />
+  <origin xyz="0.5 0.0 0.05" rpy="0.0 1.57 0.0" />
 </joint>
+
+</xacro:if>
+
+<!-- Base in EYE CALIBRATION, ATTACH MARKER TO LINK_6-->
+
+<xacro:if value="${not eye_in_hand}">
+
+  <sensor_d435 parent="base_link">
+    <origin xyz="2.0 0.0 0.8" rpy="3.14 3.14 0"/>
+  </sensor_d435>
+
+  <link name="aruco_marker_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_lrmate200id_gazebo/meshes/aruco_marker_202_100mm/meshes/aruco_marker_202_100mm.dae"/>
+        </geometry>
+      </visual>
+      <collision name='collision'>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_lrmate200id_gazebo/meshes/aruco_marker_202_100mm/meshes/aruco_marker_202_100mm.dae"/>
+        </geometry>    
+        <surface>
+          <contact>
+            <collide_without_contact>false</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
+  </link>
+
+  <joint name="marker-link_6-fixed" type="fixed">
+    <parent link="link_6"/>
+    <child link="aruco_marker_link"/>
+    <origin xyz="0.05 0.0 -0.25" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</xacro:if>
  
   <!-- Fix robot to Gazebo world -->
   <link name="world"/>
