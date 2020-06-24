@@ -10,7 +10,7 @@
 <xacro:fanuc_lrmate200id7l_robot prefix=""/>
 
 <sensor_d435 parent="link_6">
-  <origin xyz="0.02 0.00 0.08" rpy="0 0 0"/>
+  <origin xyz="0.00 0.00 0.06" rpy="0 0 0"/>
 </sensor_d435>
 
 <!-- Fix robot to Gazebo world -->
