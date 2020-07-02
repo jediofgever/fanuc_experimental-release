@@ -18,7 +18,7 @@ aluminum peripherial evaluation case.
      publishing TF values with actual calibrated camera extrinsic values -->
     <xacro:property name="d435_cam_depth_to_left_ir_offset" value="0.0"/>
     <xacro:property name="d435_cam_depth_to_right_ir_offset" value="-0.050"/>
-    <xacro:property name="d435_cam_depth_to_color_offset" value="0.000"/>
+    <xacro:property name="d435_cam_depth_to_color_offset" value="0.015"/>
   
     <!-- The following values model the aluminum peripherial case for the
   	D435 camera, with the camera joint represented by the actual 
@@ -35,7 +35,7 @@ aluminum peripherial evaluation case.
     <xacro:property name="d435_cam_depth_pz" value="${d435_cam_height/2}"/>
 
     <material name="${name}_aluminum">
-	  <color rgba="0.5 0.8 0.5 1"/>
+	  <color rgba="0.5 0.5 0.5 1"/>
     </material>
 
 
@@ -48,7 +48,7 @@ aluminum peripherial evaluation case.
     <link name="${name}_bottom_screw_frame"/>
 
     <joint name="${name}_link_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 ${d435_cam_depth_py} ${d435_cam_depth_pz}" rpy="0 0 0"/>
       <parent link="${name}_bottom_screw_frame"/>
       <child link="${name}_link" />
     </joint>
@@ -74,9 +74,9 @@ aluminum peripherial evaluation case.
         <mass value="0.01" />
         <origin xyz="0 0 0" />
         <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257" />
-         
+
       </inertial>
-     
+
     </link>
    
     <!-- camera depth joints and links -->
