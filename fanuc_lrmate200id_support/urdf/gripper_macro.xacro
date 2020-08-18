@@ -9,7 +9,7 @@
     <joint name="gripper_base_to_link_6" type="fixed">
         <parent link="link_6" />
         <child link="gripper_base_link" />
-        <origin rpy="0 0 0" xyz="0.06 0 0.0" />
+        <origin rpy="0 0 0" xyz="0.04 0 0.0" />
     </joint>
     <!-- Gripper Base -->
     <link name="gripper_base_link">
@@ -83,7 +83,7 @@
         <parent link="mid_layer_link" />
         <child link="finger_1_link" />
         <axis xyz="0 1 0" />
-        <origin rpy="3.14 0 0" xyz="0.10 0.032 0.0" />
+        <origin rpy="3.14 0 0" xyz="0.097 0.032 0.0" />
         <limit effort="30" velocity="1.0" lower="-0.2" upper="0.2" />
     </joint>
     <!-- Gripper Base -->
@@ -122,7 +122,7 @@
         <parent link="mid_layer_link" />
         <child link="finger_2_link" />
         <axis xyz="0 1 0" />
-        <origin rpy="0 0 0" xyz="0.10 -0.032 0.0" />
+        <origin rpy="0 0 0" xyz="0.097 -0.032 0.0" />
         <limit effort="30" velocity="1.0" lower="-0.2" upper="0.2" />
     </joint>
     <!-- Gripper Base -->
